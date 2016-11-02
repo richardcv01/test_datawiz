@@ -1,0 +1,24 @@
+
+{% extends "table/Base.html" %}
+
+
+{% block content %}
+
+
+
+
+
+    <form action="{% url 'table' %}" method="post">
+        {% csrf_token %}
+         <div class="centered">
+  <h1>Користувач: </h1>  <input type="text" name="name" value="test1@mail.com"/>
+  <h1>Секрет: </h1>  <input type="text" name="secret" value="test2@cbe47a5c9466fe6df05f04264349f32b"/>
+
+<input type="submit" value="Зайти" />
+                </div>
+</form>
+
+{% endblock %}
+
+
+

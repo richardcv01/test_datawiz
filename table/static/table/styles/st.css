@@ -1,0 +1,37 @@
+.centered {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    width:30%;
+    height:150px;
+    background: #f0f0f0;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+#ltext {
+display: block;
+float: left;
+width: 550px;
+border: 1px solid #000;
+}
+#rtext {
+display: block;
+float: right;
+width: 550px;
+border: 1px solid #000;
+}
+
+header {
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 4em;
+    padding: 2em 5%;
+    background: #5c96ad;
+    color: #fff;
+}

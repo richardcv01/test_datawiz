@@ -1,0 +1,17 @@
+.centered {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    width:30%;
+    height:150px;
+    background: #f0f0f0;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+     color: red;
+}

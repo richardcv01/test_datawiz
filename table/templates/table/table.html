@@ -1,0 +1,53 @@
+{% extends "table/Base.html" %}
+
+
+{% block content %}
+
+    </br>
+    Користувач: {{ client_info.name }}
+    <br>
+    Магазини:
+        {% for shop in shops %}
+    {{ shop }}
+    {% endfor %}
+
+
+<div class=table_main>
+<h1>Основні показники</h1>
+    {{ table_main|safe }}
+
+</div>
+
+
+        {% csrf_token %}
+
+
+<div id="ltext">
+   <select id="selplus">
+      <option>10</option>
+      <option>20</option>
+      <option selected="selected">30</option>
+   </select>
+
+       </br>
+       <h1>Товари, які виросли в продажах</h1>
+    <div id="ltable">
+          {{ table_plus|safe }}
+   </div>
+</div>
+
+
+<div id="rtext">
+   <select id="selminus">
+        <option>10</option>
+        <option>20</option>
+        <option selected="selected">30</option>
+   </select>
+    </br>
+       <h1>Товари, які впали в продажах</h1>
+    <div id="rtable">
+         {{ table_minus|safe }}
+    </div>
+
+</div>
+{% endblock %}

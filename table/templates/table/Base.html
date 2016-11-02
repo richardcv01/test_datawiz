@@ -1,0 +1,37 @@
+{% load staticfiles %}
+{% csrf_token %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+<title>
+    {% block title %}
+
+{% endblock %}
+</title>
+
+
+
+    <script src="{% static 'table/js/jquery.js' %}"></script>
+    <script src="{% static 'table/js/aj.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'table/styles/st.css' %}" />
+<header>
+
+</header>
+</head>
+
+<body >
+
+
+         {% block content %}
+
+        {% endblock %}
+
+
+  <div id="footer">
+{% block footer %}
+
+    {% endblock %}
+</div>
+
+</body>
+</html>
