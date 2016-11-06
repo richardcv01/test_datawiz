@@ -22,7 +22,7 @@ SECRET_KEY = '+wrj2gywe^fk@**qt976saf!+nw$hkeoo9cptres-_hafe1g6&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,15 +38,23 @@ INSTALLED_APPS = [
 ]
 
 
+#CACHES = {
+ #   "default": {
+  #      "BACKEND": "django_redis.cache.RedisCache",
+   #     "LOCATION": "redis://127.0.0.1:6379/1",
+    #    "OPTIONS": {
+     #       "CLIENT_CLASS": "django_redis.client.DefaultClient",
+      #  }
+    #}
+#}
+
 CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'cod/unique-snowflake'
     }
 }
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
